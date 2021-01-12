@@ -1,0 +1,12 @@
+<%- include("Partials/header") -%>
+<h1>Home</h1>
+<%= homeStartContent %>
+
+<% posts.forEach(function(composeObject){ %>
+     <h1> <%= composeObject.titleData %> </h1>
+     <p> <%= composeObject.bodyData.slice(0,100) +"..." %>
+       <a href="/posts/ <%= composeObject.titleData %>" >Read more</a> </p>
+
+<%  }); %>
+
+<%- include("Partials/footer") -%>
